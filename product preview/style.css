@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+/*
+      - Dark cyan: hsl(158, 36%, 37%)
+      - Cream: hsl(30, 38%, 92%)
+      - Very dark blue: hsl(212, 21%, 14%)
+      - Dark grayish blue: hsl(228, 12%, 48%)
+      - White: hsl(0, 0%, 100%)
+      */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: hsl(30, 38%, 92%);
+  display: grid;
+  place-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card {
+  width: 61rem;
+  display: flex;
+}
+
+.image {
+  width: 50%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.image .image2 {
+  display: none;
+}
+
+.content {
+  width: 50%;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.content h4 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size: 1.4rem;
+}
+
+.content h1 {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 21%, 14%);
+  font-size: 2.8rem;
+  width: 80%;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.content p {
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: hsl(228, 12%, 48%);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30px;
+  font-size: 1.6rem;
+}
+
+.price h1 {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: hsl(158, 36%, 37%);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn .add {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: hsl(156, 12%, 32%);
+}
+
+@media (max-width: 34em) {
+  .card {
+    max-width: 60rem;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: 5rem;
+  }
+
+  .content {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content h1 {
+    width: 100%;
+  }
+
+  .content p {
+    line-height: 2rem;
+    letter-spacing: 0.2px;
+  }
+
+  .image img {
+    max-width: 32rem;
+    max-height: 24rem;
+  }
+
+  .image .image1 {
+    display: none;
+  }
+
+  .image .image2 {
+    display: block;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
