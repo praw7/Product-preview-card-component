@@ -138,7 +138,7 @@ body {
   background-color: hsl(156, 12%, 32%);
 }
 
-@media (max-width: 34em) {
+@media screen and (max-width: 34em) {
   .card {
     max-width: 60rem;
     height: 100%;
